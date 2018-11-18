@@ -5,6 +5,7 @@
   Time: 2:35 PM
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>--%>
 
@@ -13,12 +14,12 @@
     <title>Welcome</title>
 </head>
 <body>
-<h2>Welcome </h2>
-<%= request.getSession().getAttribute("username") %>
+<h2>Welcome ${username}</h2>
+
 
 <br />
 <br />
-<form action="/login" method="post">
+<form action="/logout" method="post">
     <input type="submit" value="Logout">
 </form>
 
